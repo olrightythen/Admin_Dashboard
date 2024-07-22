@@ -5,9 +5,7 @@ const CardItem = ({ bgColor, icon, title, amount, change, changeType }) => {
     changeType === "increase" ? "text-sky-400" : "text-rose-500";
   return (
     <div className="flex items-center p-4 rounded-lg">
-      <div className={`bg-${bgColor} p-4 rounded-full`}>
-        <img aria-hidden="true" alt={title} src={icon} className="w-8 h-8" />
-      </div>
+      <div className={`bg-${bgColor} p-4 rounded-full`}>{icon}</div>
       <div className="px-4">
         <h3 className="text-neutral-400">{title}</h3>
         <p

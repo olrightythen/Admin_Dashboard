@@ -1,4 +1,6 @@
+import DynamicTable from "./Dashboard/DynamicTable";
 import Performance from "./Dashboard/Performance";
+import Sparklines from "./Dashboard/Sparklines";
 import TechnicalSupport from "./Dashboard/TechnicalSupport";
 import TimeLine from "./Dashboard/TimeLine";
 
@@ -10,6 +12,8 @@ const App = () => {
         <TechnicalSupport />
         <TimeLine />
       </div>
+      <Sparklines />
+      <DynamicTable />
     </>
   );
 };

@@ -1,13 +1,13 @@
-import React from 'react'
-import CardItem from '../components/CardItem';
-import laptopPhone from '../assets/lnr-laptop-phone.svg';
-import apartment from '../assets/lnr-apartment.svg';
-import graduationHat from '../assets/lnr-graduation-hat.svg';
+import React from "react";
+import CardItem from "../components/CardItem";
+import LaptopPhone from "../assets/lnr-laptop-phone.svg";
+import Apartment from "../assets/lnr-apartment.svg";
+import GraduationHat from "../assets/lnr-graduation-hat.svg";
 
 const data = [
   {
     bgColor: "yellow-500",
-    icon: laptopPhone,
+    icon: <LaptopPhone className="h-7 w-7" />,
     title: "Cash Deposits",
     amount: "1.7M",
     change: "▼ 54.1% less earnings",
@@ -15,7 +15,7 @@ const data = [
   },
   {
     bgColor: "red-500",
-    icon: graduationHat,
+    icon: <GraduationHat className="h-7 w-7" />,
     title: "Invested Dividends",
     amount: "9M",
     change: "Grow Rate: ▲ 14.1%",
@@ -23,7 +23,7 @@ const data = [
   },
   {
     bgColor: "green-500",
-    icon: apartment,
+    icon: <Apartment className="h-7 w-7" />,
     title: "Capital Gains",
     amount: "$563",
     change: "Increased by ▲ 7.35%",
@@ -60,6 +60,6 @@ const Performance = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Performance
+export default Performance;

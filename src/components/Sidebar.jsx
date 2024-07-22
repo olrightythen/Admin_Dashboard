@@ -6,12 +6,12 @@ import { NavLink } from "react-router-dom";
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <aside
-      className={`fixed min-h-full inset-y-0 left-0 z-10 transform bg-background border-r transition-transform duration-300 ease-in-out ${
+      className={`fixed min-h-full inset-y-0 left-0 z-20 transform bg-white border-r transition-transform duration-300 ease-in-out ${
         isOpen ? "translate-x-0" : "-translate-x-full"
-      } sm:relative sm:translate-x-0 w-screen sm:w-60`}
+      } sm:relative sm:translate-x-0 w-screen sm:w-60 sm:z-10`}
     >
       <div className="px-4 pt-4 text-blue-600 font-medium">Menu</div>
-      <nav className="flex flex-1 flex-col gap-2 overflow-y-auto px-4 py-4">
+      <nav className="flex flex-1 flex-col gap-2 overflow-hidden px-4 py-4">
         <NavLink
           to="/"
           className={({ isActive }) =>
@@ -20,6 +20,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             }`
           }
           aria-label="Dashboard"
+          onClick={toggleSidebar}
         >
           <FaHome className="h-5 w-5" />
           <span className="text-sm font-medium sm:block">Dashboard</span>
@@ -32,6 +33,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             }`
           }
           aria-label="Analytics"
+          onClick={toggleSidebar}
         >
           <FaRegChartBar className="h-5 w-5" />
           <span className="text-sm font-medium sm:block">Analytics</span>
@@ -44,6 +46,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             }`
           }
           aria-label="Settings"
+          onClick={toggleSidebar}
         >
           <FaGear className="h-5 w-5" />
           <span className="text-sm font-medium sm:block">Settings</span>
@@ -56,6 +59,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             }`
           }
           aria-label="Support"
+          onClick={toggleSidebar}
         >
           <FaRegQuestionCircle className="h-5 w-5" />
           <span className="text-sm font-medium sm:block">Support</span>
