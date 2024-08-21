@@ -56,7 +56,7 @@ const SparklineCard = ({ id, label, color, data, title, bottom }) => {
   }, [id, color, data]);
 
   return (
-    <div className={`bg-white text-black min-w-[20%] max-w-[25%] flex-1 h-64 p-6 rounded-md shadow-lg border-b-4 ${bottom}`}>
+    <div className={`bg-white text-black min-w-full xl:min-w-[20%] xl:max-w-[25%] flex-1 h-64 p-6 rounded-md shadow-lg border-b-4 ${bottom}`}>
       <div id={id} className="mt-3"></div>
     </div>
   );
